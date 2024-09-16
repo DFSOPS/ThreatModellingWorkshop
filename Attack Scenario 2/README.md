@@ -7,39 +7,39 @@ The attacker identifies the health app and its backend database structure throug
 -   Analyzing the app's web interface for input fields (e.g., login forms, search boxes).
 -   Using automated tools to scan for vulnerabilities in the app's API endpoints.
 
-#### 2\. Weaponization
+#### Weaponization
 
 The attacker crafts a malicious SQL query designed to exploit vulnerabilities in the app's input validation. For example, they create a payload that could be injected into a login form to bypass authentication or extract sensitive data.
 
-#### 3\. Delivery
+#### Delivery
 
 The attacker delivers the crafted SQL injection payload by submitting it through the app's input fields. This could be done through:
 
 -   Directly entering the payload into a login form.
 -   Sending a crafted request to the app's API endpoints.
 
-#### 4\. Exploitation
+#### Exploitation
 
 The health app fails to properly sanitize the input, allowing the SQL injection payload to be executed against the backend database. This could lead to:
 
 -   Unauthorized access to user accounts.
 -   Retrieval of sensitive data, such as patient records, prescriptions, and appointment details.
 
-#### 5\. Installation
+#### Installation
 
 While this step is less applicable in a traditional sense for SQL injection, the attacker may establish a foothold by:
 
 -   Creating a new admin account in the database.
 -   Modifying existing user roles to gain elevated privileges.
 
-#### 6\. Command and Control (C2)
+#### Command and Control (C2)
 
 The attacker can now control the compromised database. They may:
 
 -   Use the access to extract data continuously.
 -   Set up scripts or automated queries to maintain access and gather information over time.
 
-#### 7\. Actions on Objectives
+#### Actions on Objectives
 
 The attacker can perform various malicious actions, including:
 
