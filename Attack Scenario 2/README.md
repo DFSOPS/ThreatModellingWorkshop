@@ -7,7 +7,7 @@ The attacker identifies the health app and its backend database structure throug
 -   Analyzing the app's web interface for input fields (e.g., login forms, search boxes).
 -   Using automated tools to scan for vulnerabilities in the app's API endpoints.
 
-#### Weaponization
+#### Weaponization
 
 The attacker crafts a malicious SQL query designed to exploit vulnerabilities in the app's input validation. For example, they create a payload that could be injected into a login form to bypass authentication or extract sensitive data.
 
