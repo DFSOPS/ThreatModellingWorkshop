@@ -63,6 +63,7 @@ The attacker can perform various malicious actions, including:
 
 This scenario provides a comprehensive view of a SQL injection attack on a health app, illustrating the various stages of an attack and the importance of proactive security measures.  
 
+
 ```mermaid
 flowchart TD
     A[Attacker] --> B[Reconnaissance]
