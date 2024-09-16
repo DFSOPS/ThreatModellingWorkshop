@@ -1,25 +1,24 @@
 ```mermaid
 sequenceDiagram
-    participant User
-    participant SolariHealthApp
+    participant Attacker
+    participant SolarisHealthApp
     participant BackendServer
     participant CnCServer
-    participant Attacker
+    participant User
 
     %% Reconnaissance
-    Attacker->>SolariHealthApp: Analyzes web interface for input fields
-    Attacker->>SolariHealthApp: Scans API endpoints for vulnerabilities
+    Attacker->>SolarisHealthApp: Analyzes web interface and scans API endpoints
 
     %% Weaponization
-    Attacker->>Attacker: Crafts malicious SQL query
+    Attacker->>Attacker: Crafts malicious SQL payload
 
     %% Delivery
-    Attacker->>SolariHealthApp: Submits SQL injection payload via login form or API
+    Attacker->>SolarisHealthApp: Submits SQL injection payload via login form or API
 
     %% Exploitation
-    SolariHealthApp->>BackendServer: Passes input to BackendServer
+    SolarisHealthApp->>BackendServer: Passes input to BackendServer
     BackendServer->>BackendServer: Executes SQL query with injected payload
-    BackendServer->>SolariHealthApp: Returns data or confirmation of access
+    BackendServer->>SolarisHealthApp: Returns data or access confirmation
 
     %% Installation
     BackendServer->>BackendServer: Creates new admin account or modifies user roles
