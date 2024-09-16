@@ -84,3 +84,16 @@ flowchart TD
     O --> P[Privacy Violations]
     P --> Q[Reputational Damage]
     Q --> R[Financial Loss]
+
+    classDef attacker fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef app fill:#ccf,stroke:#333,stroke-width:2px;
+    classDef server fill:#cfc,stroke:#333,stroke-width:2px;
+    classDef impact fill:#fdd,stroke:#333,stroke-width:2px;
+
+    class A attacker;
+    class E app;
+    class G server;
+    class O impact;
+    class P impact;
+    class Q impact;
+    class R impact;
