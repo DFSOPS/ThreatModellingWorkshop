@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     A[User] -->|Receives phishing email| B[Attacker]
     B -->|Creates fake login page| C[SolariHealthApp]
