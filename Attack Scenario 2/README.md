@@ -66,6 +66,8 @@ This scenario provides a comprehensive view of a SQL injection attack on a healt
 
 ```mermaid
 flowchart TD
+
+
     A[Attacker] --> B[Reconnaissance]
     B --> C[Craft Malicious SQL Payload]
     C --> D[Deliver Payload]
