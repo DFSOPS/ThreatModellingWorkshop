@@ -17,5 +17,15 @@ flowchart TD
     F --> |Establish covert channel| M[STRIDE: Eavesdropping, Tampering]
     G --> |Exfiltrate data, commit fraud| N[STRIDE: Information Disclosure, Tampering, Repudiation]
 
+    H --> |Mitigate with Encryption & Authentication| O[Controls: HTTPS, Certificate Pinning]
+    I --> |Mitigate with Secure Access Controls| P[Controls: Network Security, Wi-Fi Security Awareness]
+    J --> |Mitigate with Encrypted Communication| Q[Controls: HTTPS, HSTS]
+    K --> |Mitigate with Data Protection| R[Controls: Encryption, Secure Data Transmission]
+    L --> |Mitigate with Secure Session Management| S[Controls: Session Expiration, MFA]
+    M --> |Mitigate with Traffic Monitoring| T[Controls: Network Monitoring, Anomaly Detection]
+    N --> |Mitigate with Fraud Detection & Incident Response| U[Controls: Monitoring, Incident Management]
+
     classDef stride fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef control fill:#ccf,stroke:#333,stroke-width:2px;
     class H,I,J,K,L,M,N stride;
+    class O,P,Q,R,S,T,U control;
