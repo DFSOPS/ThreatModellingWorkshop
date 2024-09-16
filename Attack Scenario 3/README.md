@@ -1,4 +1,4 @@
-## **Attack 3 Summary: Man-in-the-Middle Attack**
+## **Attack 3 Scenario: Man-in-the-Middle Attack**
 
 
 Here's a **cyberattack scenario** involving a **Man-in-the-Middle (MitM) Attack** on a health app, using the **Cyber Kill Chain** framework. The attacker exploits weaknesses in the app's network communication, targeting insecure connections to intercept sensitive information like prescription records, payment details, and appointment schedules.
