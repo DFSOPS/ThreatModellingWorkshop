@@ -63,13 +63,7 @@ The attacker can perform various malicious actions, including:
 
 This scenario provides a comprehensive view of a SQL injection attack on a health app, illustrating the various stages of an attack and the importance of proactive security measures.  
 
-# SQL Injection Attack Scenario on Health App
-
-This document outlines the stages of a SQL Injection attack on a health app and suggests mitigations to prevent such attacks.
-
-## Attack Stages
-
-# SQL Injection Attack Scenario on Health App
+#### Attack Stages
 
 This document outlines the stages of a SQL Injection attack on a health app and suggests mitigations to prevent such attacks.
 
