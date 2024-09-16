@@ -1,6 +1,6 @@
 ### Attack Scenario: SQL Injection Attack on Health App
 
-#### 1\. Reconnaissance
+#### Reconnaissance
 
 The attacker identifies the health app and its backend database structure through various means, such as:
 
