@@ -1,10 +1,10 @@
 ```mermaid
 sequenceDiagram
-    participant Attacker
-    participant CnCServer
-    participant BackendServer
-    participant SolarisHealthApp
     participant User
+    participant SolarisHealthApp
+    participant BackendServer
+    participant CnCServer
+    participant Attacker
 
     User->>SolarisHealthApp: Enters credentials
     SolarisHealthApp->>BackendServer: Sends login request
