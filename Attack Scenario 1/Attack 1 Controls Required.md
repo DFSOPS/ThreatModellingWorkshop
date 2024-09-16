@@ -1,7 +1,5 @@
 **Controls Required:**
 
-
-
 - Regular security audits to detect vulnerabilities.
 
 - Patch management to ensure software is up-to-date.
