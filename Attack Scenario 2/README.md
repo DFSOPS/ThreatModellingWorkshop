@@ -75,6 +75,8 @@ This document outlines the stages of a SQL Injection attack on a health app and 
 
 ## Attack Stages
 
+## Attack Stages
+
 ```mermaid
 flowchart TD
     A[Reconnaissance] --> B[Weaponization]
@@ -86,7 +88,7 @@ flowchart TD
 
     A --> A1[Identify app and database structure]
     A1 --> A2[Analyze web interface for input fields]
-    A2 --> A3[Use tools to scan API endpoints]
+    A1 --> A3[Use tools to scan API endpoints]
 
     B --> B1[Craft malicious SQL query]
     B1 --> B2[Create payload for login form]
@@ -106,7 +108,7 @@ flowchart TD
 
     G --> G1[Data Theft]
     G1 --> G2[Data Manipulation]
-    G2 --> G3[Identity Theft]
+    G1 --> G3[Identity Theft]
 
     subgraph Impact
         H1[Patient Safety Risks]
