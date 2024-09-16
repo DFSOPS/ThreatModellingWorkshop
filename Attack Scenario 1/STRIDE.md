@@ -2,32 +2,28 @@
 
 ```mermaid
 graph TD
-    A[STRIDE Framework Controls] --> B[User Education and Awareness Training]
-    B --> B1[Conduct regular training sessions for users to recognize phishing emails and suspicious activities]
+    A[STRIDE Framework Controls] --> B[Spoofing]
+    B --> B1[Multi-Factor Authentication]
     
-    A --> C[Email Filtering and Threat Detection]
-    C --> C1[Implement advanced email filtering solutions to detect and block phishing emails]
+    A --> C[Tampering]
+    C --> C1[Email Filtering and Threat Detection]
+    C --> C2[Robust Input Validation and Sanitization]
     
-    A --> D[Multi-Factor Authentication]
-    D --> D1[Enforce MFA for all user accounts, especially admin accounts to add an extra layer of security]
+    A --> D[Repudiation]
+    D --> D1[Monitoring and Logging]
+    D --> D2[Incident Response Plan]
     
-    A --> E[Regular Security Assessments]
-    E --> E1[Conduct frequent security assessments and penetration testing to identify and fix vulnerabilities]
+    A --> E[Information Disclosure]
+    E --> E1[Access Control and Least Privilege]
+    E --> E2[Regular Security Assessments]
     
-    A --> F[Robust Input Validation and Sanitization]
-    F --> F1[Implement strict input validation and sanitization to prevent SQL injection and XSS vulnerabilities]
+    A --> F[Denial of Service]
+    F --> F1[Backup and Recovery Procedures]
+    F --> F2[Monitoring and Logging]
     
-    A --> G[Access Control and Least Privilege]
-    G --> G1[Apply the principle of least privilege for user accounts ensuring minimal necessary access]
-    
-    A --> H[Incident Response Plan]
-    H --> H1[Develop a comprehensive incident response plan for identifying and mitigating security breaches]
-    
-    A --> I[Monitoring and Logging]
-    I --> I1[Implement continuous monitoring and logging of user activities to detect unusual access patterns]
-    
-    A --> J[Backup and Recovery Procedures]
-    J --> J1[Regularly back up data and establish recovery procedures for restoring information if compromised]
+    A --> G[Elevation of Privilege]
+    G --> G1[Access Control and Least Privilege]
+    G --> G2[Regular Security Assessments]
 
 
 
