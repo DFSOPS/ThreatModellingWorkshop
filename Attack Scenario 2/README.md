@@ -61,4 +61,44 @@ The attacker can perform various malicious actions, including:
 -   Regular Security Audits: Conduct frequent security assessments and penetration testing to identify and address vulnerabilities in the app.
 -   Monitoring and Logging: Implement monitoring to detect unusual database queries and access patterns.
 
-This scenario provides a comprehensive view of a SQL injection attack on a health app, illustrating the various stages of an attack and the importance of proactive security measures.
+This scenario provides a comprehensive view of a SQL injection attack on a health app, illustrating the various stages of an attack and the importance of proactive security measures.  
+
+```mermaid
+flowchart TD
+    A[Attacker] --> B[Reconnaissance]
+    B --> C[Craft Malicious SQL Payload]
+    C --> D[Deliver Payload]
+    D --> E[Submit via Login Form or API]
+    E --> F[SolarisHealthApp]
+    F --> G[Pass Input to BackendServer]
+    G --> H[BackendServer]
+    H --> I[Execute SQL Query with Payload]
+    I --> J[Return Data or Access Confirmation]
+    J --> K[Install Persistence]
+    K --> L[Create Admin Account or Modify Roles]
+    L --> M[Command and Control (C2)]
+    M --> N[Continuous Access to Database]
+    N --> O[Set Up Scripts for Ongoing Access]
+    O --> P[Actions on Objectives]
+    P --> Q[Extract Sensitive Data]
+    P --> R[Alter Prescription Details or Appointment Times]
+    P --> S[Identity Theft]
+    Q --> T[Patient Safety Risks]
+    R --> T
+    S --> T
+    T --> U[Privacy Violations]
+    U --> V[Reputational Damage]
+    V --> W[Financial Loss]
+
+    classDef attacker fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef app fill:#ccf,stroke:#333,stroke-width:2px;
+    classDef server fill:#cfc,stroke:#333,stroke-width:2px;
+    classDef impact fill:#fdd,stroke:#333,stroke-width:2px;
+
+    class A attacker;
+    class F app;
+    class H server;
+    class T impact;
+    class U impact;
+    class V impact;
+    class W impact;
