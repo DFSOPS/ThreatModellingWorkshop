@@ -24,5 +24,10 @@ graph TD
     H --> H1[Develop a comprehensive incident response plan for identifying and mitigating security breaches]
     
     A --> I[Monitoring and Logging]
-    I --> I1[Implement conti
+    I --> I1[Implement continuous monitoring and logging of user activities to detect unusual access patterns]
+    
+    A --> J[Backup and Recovery Procedures]
+    J --> J1[Regularly back up data and establish recovery procedures for restoring information if compromised]
+
+
 
