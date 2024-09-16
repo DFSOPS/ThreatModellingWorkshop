@@ -1,40 +1,30 @@
-This is a generic example of how you can use STRIDE to demonstrate the current controls in place for the application and is not specific to scenario 1.
+# Mermaid Graph - STRIDE Framework Controls
 
-```mermaid      
+```mermaid
 graph TD
-    subgraph User Interaction
-        A[User] -->|HTTP Requests| B[Web Server]
-    end
-
-    subgraph Web Server
-        B -->|Access| C[Database]
-        B -->|Receive Input| D[Input Validation]
-        B -->|Execute| E[Application Logic]
-    end
-
-    subgraph Database
-        C -->|Store/Fetch Data| F[Data Storage]
-    end
-
-    A((User)) -.->|Authentication| G[Authentication Mechanism]
-
-    B -.->|Logging| H[Logging Service]
-
-    A -.->|Access| I[Admin Panel]
-    I -.->|Controls| J[Admin Functionality]
-
-    %% Threats
-    T1([Spoofing: Spoof User Identity]) -.-> A
-    T2([Tampering: Alter HTTP Request]) -.-> B
-    T3([Repudiation: Deny Transactions]) -.-> H
-    T4([Information Disclosure: Data Leak]) -.-> F
-    T5([Denial of Service: Overload Server]) -.-> B
-    T6([Elevation of Privilege: Unauthorized Access]) -.-> I
-
-    %% Mitigations
-    M1([Mitigation: Strong Authentication]) --> T1
-    M2([Mitigation: HTTPS]) --> T2
-    M3([Mitigation: Non-repudiation Mechanisms]) --> T3
-    M4([Mitigation: Data Encryption]) --> T4
-    M5([Mitigation: Rate Limiting]) --> T5
-    M6([Mitigation: Access Controls]) --> T6
+    A[STRIDE Framework Controls] --> B[User Education and Awareness Training]
+    B --> B1[Conduct regular training sessions for users to recognize phishing emails and suspicious activities.]
+    
+    A --> C[Email Filtering and Threat Detection]
+    C --> C1[Implement advanced email filtering solutions to detect and block phishing emails.]
+    
+    A --> D[Multi-Factor Authentication (MFA)]
+    D --> D1[Enforce MFA for all user accounts, especially admin accounts, to add an extra layer of security.]
+    
+    A --> E[Regular Security Assessments]
+    E --> E1[Conduct frequent security assessments and penetration testing to identify and fix vulnerabilities.]
+    
+    A --> F[Robust Input Validation and Sanitization]
+    F --> F1[Implement strict input validation and sanitization to prevent SQL injection and XSS vulnerabilities.]
+    
+    A --> G[Access Control and Least Privilege]
+    G --> G1[Apply the principle of least privilege for user accounts, ensuring minimal necessary access.]
+    
+    A --> H[Incident Response Plan]
+    H --> H1[Develop a comprehensive incident response plan for identifying and mitigating security breaches.]
+    
+    A --> I[Monitoring and Logging]
+    I --> I1[Implement continuous monitoring and logging of user activities to detect unusual access patterns.]
+    
+    A --> J[Backup and Recovery Procedures]
+    J --> J1[Regularly back up data and establish recovery procedures for restoring information if compromised.]
