@@ -69,7 +69,6 @@ This document outlines the stages of a SQL Injection attack on a health app and 
 
 #### SQL Injection Attack Scenario on Health App
 
-### Attack Stages
 
 ```mermaid
 flowchart TD
