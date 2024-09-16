@@ -1,36 +1,51 @@
-### Attack Scenario: Credential Theft and Data Manipulation
+### Attack Scenario: SQL Injection Attack on Health App
 
 #### 1\. Reconnaissance
 
-The attacker conducts reconnaissance to gather information about the health app, its user base, and potential vulnerabilities. They may explore forums, social media, and the app's website to identify common user behaviors, such as password reuse or weak security practices.
+The attacker identifies the health app and its backend database structure through various means, such as:
+
+-   Analyzing the app's web interface for input fields (e.g., login forms, search boxes).
+-   Using automated tools to scan for vulnerabilities in the app's API endpoints.
 
 #### 2\. Weaponization
 
-The attacker creates a phishing email that appears to be from the health app, enticing users to click on a link that leads to a fake login page. This page is designed to capture user credentials when patients attempt to log in.
+The attacker crafts a malicious SQL query designed to exploit vulnerabilities in the app's input validation. For example, they create a payload that could be injected into a login form to bypass authentication or extract sensitive data.
 
 #### 3\. Delivery
 
-The phishing email is sent to a targeted list of patients who use the health app. The email includes a sense of urgency, such as a notification about a new feature or an important update, to increase the likelihood of users clicking the link.
+The attacker delivers the crafted SQL injection payload by submitting it through the app's input fields. This could be done through:
+
+-   Directly entering the payload into a login form.
+-   Sending a crafted request to the app's API endpoints.
 
 #### 4\. Exploitation
 
-When a patient clicks the link and enters their credentials on the fake login page, the attacker captures this information. The attacker now has access to the patient's account on the legitimate health app.
+The health app fails to properly sanitize the input, allowing the SQL injection payload to be executed against the backend database. This could lead to:
+
+-   Unauthorized access to user accounts.
+-   Retrieval of sensitive data, such as patient records, prescriptions, and appointment details.
 
 #### 5\. Installation
 
-The attacker may install malware on the patient's device if they can convince the user to download a malicious app or file disguised as an update for the health app. This malware could provide ongoing access to the device and the app.
+While this step is less applicable in a traditional sense for SQL injection, the attacker may establish a foothold by:
+
+-   Creating a new admin account in the database.
+-   Modifying existing user roles to gain elevated privileges.
 
 #### 6\. Command and Control (C2)
 
-Using the stolen credentials, the attacker logs into the health app and establishes a command and control channel. They can now monitor the patient's activities, access sensitive information, and potentially manipulate data.
+The attacker can now control the compromised database. They may:
+
+-   Use the access to extract data continuously.
+-   Set up scripts or automated queries to maintain access and gather information over time.
 
 #### 7\. Actions on Objectives
 
-The attacker can perform several malicious actions:
+The attacker can perform various malicious actions, including:
 
--   Data Theft: Access and download sensitive patient information, including prescriptions and appointment details.
--   Data Manipulation: Change prescription dosages or appointment times, potentially endangering the patient's health.
--   Identity Theft: Use the stolen information to impersonate the patient, requesting refills or making unauthorized appointments.
+-   Data Theft: Extracting sensitive patient information, including personal details, prescriptions, and appointment histories.
+-   Data Manipulation: Altering prescription details or appointment times, potentially endangering patient health.
+-   Identity Theft: Using stolen information to impersonate patients, leading to fraudulent activities.
 
 ### Impact:
 
@@ -41,9 +56,9 @@ The attacker can perform several malicious actions:
 
 ### Mitigations:
 
--   User Education: Train users to recognize phishing attempts and the importance of verifying URLs.
--   Multi-Factor Authentication (MFA): Implement MFA to add an extra layer of security for user accounts.
--   Regular Security Audits: Conduct frequent security assessments to identify and address vulnerabilities in the app.
--   Data Encryption: Ensure that all sensitive data is encrypted both in transit and at rest to protect against unauthorized access.
+-   Input Validation: Implement strict input validation and sanitization to prevent SQL injection attacks.
+-   Parameterized Queries: Use prepared statements and parameterized queries to ensure that user inputs are treated as data, not executable code.
+-   Regular Security Audits: Conduct frequent security assessments and penetration testing to identify and address vulnerabilities in the app.
+-   Monitoring and Logging: Implement monitoring to detect unusual database queries and access patterns.
 
-This scenario can serve as a comprehensive example for your threat modeling workshop, illustrating the various stages of an attack and the importance of proactive security measures.
+This scenario provides a comprehensive view of a SQL injection attack on a health app, illustrating the various stages of an attack and the importance of proactive security measures.
