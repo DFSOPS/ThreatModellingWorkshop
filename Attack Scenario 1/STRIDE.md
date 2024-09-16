@@ -1,4 +1,4 @@
-# Mermaid Graph - STRIDE Framework Controls
+# STRIDE Framework Controls
 
 ```mermaid
 graph TD
@@ -28,3 +28,4 @@ graph TD
     
     A --> J[Backup and Recovery Procedures]
     J --> J1[Regularly back up data and establish recovery procedures for restoring information if compromised.]
+
