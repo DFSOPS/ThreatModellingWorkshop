@@ -67,49 +67,18 @@ This scenario provides a comprehensive view of a SQL injection attack on a healt
 
 This document outlines the stages of a SQL Injection attack on a health app and suggests mitigations to prevent such attacks.
 
+#### SQL Injection Attack Scenario on Health App
+
+### Attack Stages
+
 ```mermaid
 flowchart TD
-    A[Reconnaissance] --> B[Weaponization]
-    B --> C[Delivery]
-    C --> D[Exploitation]
-    D --> E[Installation]
-    E --> F[Command and Control]
-    F --> G[Actions on Objectives]
+    A[Reconnaissance] --> B[Identify Vulnerabilities]
+    B --> C[Craft SQL Injection Payload]
+    C --> D[Submit Payload]
+    D --> E[Gain Unauthorized Access]
+    E --> F[Extract Sensitive Data]
 
-    A --> A1[Identify app and database structure]
-    A1 --> A2[Analyze web interface for input fields]
-    A1 --> A3[Use tools to scan API endpoints]
-
-    B --> B1[Craft malicious SQL query]
-    B1 --> B2[Create payload for login form]
-
-    C --> C1[Submit payload through input fields]
-    C1 --> C2[Send crafted request to API]
-
-    D --> D1[App fails to sanitize input]
-    D1 --> D2[Execute SQL payload on database]
-    D2 --> D3[Unauthorized access and data retrieval]
-
-    E --> E1[Create new admin account]
-    E1 --> E2[Modify user roles for privileges]
-
-    F --> F1[Extract data continuously]
-    F1 --> F2[Set up scripts for access]
-
-    G --> G1[Data Theft]
-    G1 --> G2[Data Manipulation]
-    G1 --> G3[Identity Theft]
-
-    subgraph Impact
-        H1[Patient Safety Risks]
-        H2[Privacy Violations]
-        H3[Reputational Damage]
-        H4[Financial Loss]
-    end
-
-    subgraph Mitigations
-        I1[Input Validation]
-        I2[Parameterized Queries]
-        I3[Regular Security Audits]
-        I4[Monitoring and Logging]
-    end
+    F --> G[Data Theft]
+    F --> H[Data Manipulation]
+    F --> I[Identity Theft]
