@@ -1,7 +1,7 @@
 # DDoS Attack Flowchart with STRIDE and Mitigation
 
 ```mermaid
-flowchart TD
+flowchart TB
     A[Reconnaissance] --> B[Weaponization]
     B --> C[Delivery]
     C --> D[Exploitation]
@@ -9,33 +9,32 @@ flowchart TD
     E --> F[Actions on Objectives]
 
     %% STRIDE Threats
-    G[Spoofing] --> A
-    H[Tampering] --> B
-    I[Repudiation] --> C
-    J[Information Disclosure] --> D
-    K[Denial of Service] --> E
-    L[Elevation of Privilege] --> F
+    A --> G[Spoofing]
+    B --> H[Tampering]
+    C --> I[Repudiation]
+    D --> J[Information Disclosure]
+    E --> K[Denial of Service]
+    F --> L[Elevation of Privilege]
 
     %% Mitigation Strategies
     M[Mitigation Strategies]
-    M --> N[DDoS Protection Services]
-    M --> O[Rate Limiting]
-    M --> P[Traffic Monitoring]
-    M --> Q[Scalable Infrastructure]
-    M --> R[Redundancy]
+    N[DDoS Protection Services]
+    O[Rate Limiting]
+    P[Traffic Monitoring]
+    Q[Scalable Infrastructure]
+    R[Redundancy]
 
     %% Connecting mitigations to relevant threats
-    N -- Mitigates Denial of Service --> K
-    O -- Mitigates Denial of Service --> K
-    P -- Mitigates Information Disclosure --> J
-    Q -- Mitigates Denial of Service --> K
-    R -- Mitigates Spoofing & Tampering --> G, H
+    K --> N
+    K --> O
+    J --> P
+    G --> R
+    H --> R
 
-    %% Connection of attacks and mitigations
-    A --> M
-    B --> M
-    C --> M
-    D --> M
-    E --> M
-    F --> M
+    %% Connections between threats and mitigation
+    M --> K
+    M --> J
+    M --> G
+    M --> H
+
 
