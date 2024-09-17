@@ -1,7 +1,7 @@
 # STRIDE Threat Modeling for DDoS Attack with Controls
 
 ```mermaid
-flowchart TD
+graph TD
     A[Reconnaissance]
     B[Weaponization]
     C[Delivery]
@@ -37,6 +37,7 @@ flowchart TD
     J --> P
     K --> Q
     K --> R
+
 
 
 
