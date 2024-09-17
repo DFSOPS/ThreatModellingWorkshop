@@ -2,43 +2,25 @@
 
 ```mermaid
 flowchart TD
-    %% Attack Stages
     A[Reconnaissance] --> B[Weaponization]
     B --> C[Delivery]
     C --> D[Exploitation]
     D --> E[Command and Control (C2)]
     E --> F[Actions on Objectives]
 
-    %% STRIDE Threats
-    G[Spoofing]
-    H[Tampering]
-    I[Repudiation]
-    J[Information Disclosure]
-    K[Denial of Service]
-    L[Elevation of Privilege]
+    G[Spoofing] --> A
+    H[Tampering] --> B
+    I[Repudiation] --> C
+    J[Information Disclosure] --> D
+    K[Denial of Service] --> E
+    L[Elevation of Privilege] --> F
 
-    %% Linking STRIDE Threats to Stages
-    A --> G
-    B --> H
-    C --> I
-    D --> J
-    E --> K
-    F --> L
-
-    %% Mitigation Controls
     M[Mitigation Controls]
-    N[DDoS Protection Services]
-    O[Rate Limiting]
-    P[Traffic Monitoring]
-    Q[Scalable Infrastructure]
-    R[Redundancy]
-
-    %% Linking Threats to Mitigations
-    K --> N
-    K --> O
-    J --> P
-    G --> R
-    H --> R
+    N[DDoS Protection Services] --> K
+    O[Rate Limiting] --> K
+    P[Traffic Monitoring] --> J
+    Q[Scalable Infrastructure] --> K
+    R[Redundancy] --> K
 
 
 
