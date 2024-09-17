@@ -1,7 +1,7 @@
-| Risk ID | Description                                         | Severity | Likelihood | Impact | Mitigation Plan                                      |
-|---------|-----------------------------------------------------|----------|------------|--------|------------------------------------------------------|
-| R1      | Lack of encryption for sensitive data transmission | High     | Medium     | High   | Implement TLS/SSL for data encryption during transit |
-| R2      | Weak authentication mechanisms                     | Medium   | High       | High   | Implement multi-factor authentication (MFA)         |
-| R3      | Vulnerable third-party libraries                   | Medium   | High       | Medium | Regularly update and patch third-party dependencies |
-| R4      | Insufficient logging and monitoring                | High     | Medium     | High   | Implement comprehensive logging and monitoring      |
-| R5      | Lack of disaster recovery plan                     | High     | High       | High   | Develop and test a robust disaster recovery plan    |
+| Risk ID | Description | Severity | Likelihood | Impact | Mitigation Plan |
+| --- | --- | --- | --- | --- | --- |
+| R1 | Weak encryption or insecure communication protocols in the health app, potentially allowing Man-in-the-Middle (MitM) attacks. | High | Medium | High | Use HTTPS with strong SSL/TLS, implement certificate pinning, and educate users on Wi-Fi risks. |
+| R2 | Weak authentication mechanisms that could allow unauthorized access to user accounts and sensitive information. | High | High | High | Implement multi-factor authentication (MFA), use strong password policies, and monitor login activities. |
+| R3 | Insecure client-side data storage that may lead to exposure of sensitive medical information if the device is compromised. | Medium | Medium | High | Encrypt sensitive data at rest, enforce secure storage practices, and conduct regular security audits. |
+| R4 | Insecure API endpoints lacking proper authentication and input validation, which could allow unauthorized access or data manipulation. | High | Medium | High | Secure API endpoints with proper authentication, validate and sanitize inputs, and perform regular API security testing. |
+| R5 | Susceptibility to phishing attacks that may trick users into revealing login credentials or sensitive information. | High | High | High | Implement user education and awareness programs, use email filtering to detect phishing attempts, and employ anti-phishing technologies. |
