@@ -24,7 +24,7 @@ Each scenario was evaluated using the cyber attack kill chain, along with the MI
 Conclusion
 ----------
 
-The threat modeling session identified a total of 4 high-risk and 1 medium-risk vulnerabilities.
+The threat modeling session identified a total of 5 high-risk vulnerabilities.
 
 Required Controls
 -----------------
