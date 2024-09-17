@@ -2,26 +2,41 @@
 
 ```mermaid
 flowchart TD
-    A[Reconnaissance] --> B[Weaponization]
-    B --> C[Delivery]
-    C --> D[Exploitation]
-    D --> E[Command and Control (C2)]
-    E --> F[Actions on Objectives]
+    A[Reconnaissance]
+    B[Weaponization]
+    C[Delivery]
+    D[Exploitation]
+    E[Command and Control (C2)]
+    F[Actions on Objectives]
 
-    G[Spoofing] --> A
-    H[Tampering] --> B
-    I[Repudiation] --> C
-    J[Information Disclosure] --> D
-    K[Denial of Service] --> E
-    L[Elevation of Privilege] --> F
+    G[Spoofing]
+    H[Tampering]
+    I[Repudiation]
+    J[Information Disclosure]
+    K[Denial of Service]
+    L[Elevation of Privilege]
 
     M[Mitigation Controls]
-    N[DDoS Protection Services] --> K
-    O[Rate Limiting] --> K
-    P[Traffic Monitoring] --> J
-    Q[Scalable Infrastructure] --> K
-    R[Redundancy] --> K
+    N[DDoS Protection Services]
+    O[Rate Limiting]
+    P[Traffic Monitoring]
+    Q[Scalable Infrastructure]
+    R[Redundancy]
 
+    %% Attacks linked to stages
+    A --> G
+    B --> H
+    C --> I
+    D --> J
+    E --> K
+    F --> L
+
+    %% Mitigations linked to threats
+    K --> N
+    K --> O
+    J --> P
+    K --> Q
+    K --> R
 
 
 
