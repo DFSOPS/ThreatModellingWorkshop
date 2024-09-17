@@ -98,15 +98,16 @@ flowchart TD
     E --> F[Exfiltrating Data]
     
     A --> G[Mitigation: Regular Security Audits]
-    B --> H[Mitigation: Network Segmentation and Monitoring]
-    C --> I[Mitigation: Use HTTPS with TLS/SSL]
-    D --> J[Mitigation: Strong Encryption Protocols]
+    B --> H[Mitigation: Network Segmentation]
+    C --> I[Mitigation: Use HTTPS/TLS]
+    D --> J[Mitigation: Strong Encryption]
     E --> K[Mitigation: Data Integrity Checks]
-    F --> L[Mitigation: Data Loss Prevention (DLP) Solutions]
-    
+    F --> L[Mitigation: Data Loss Prevention]
+
     classDef attack fill:#f9f,stroke:#333,stroke-width:2px;
     classDef mitigation fill:#ccf,stroke:#333,stroke-width:2px;
     
     class A,B,C,D,E,F attack;
     class G,H,I,J,K,L mitigation;
+
 
