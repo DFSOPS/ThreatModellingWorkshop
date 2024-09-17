@@ -1,7 +1,5 @@
-# STRIDE Threat Modeling for DDoS Attack with Controls
-
 ```mermaid
-graph TD
+graph TB
     A[Reconnaissance] --> B[Weaponization]
     B --> C[Delivery]
     C --> D[Exploitation]
