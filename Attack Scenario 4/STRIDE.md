@@ -14,11 +14,12 @@ graph TD
     F --> J[Scalable Infrastructure]
     F --> K[Redundancy]
 
-    G -->|Mitigates| E
-    H -->|Mitigates| E
-    I -->|Mitigates| E
-    J -->|Mitigates| E
-    K -->|Mitigates| E
+    G --> E
+    H --> E
+    I --> E
+    J --> E
+    K --> E
+
 
 
 
