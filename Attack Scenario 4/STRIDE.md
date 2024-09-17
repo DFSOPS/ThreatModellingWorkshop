@@ -3,12 +3,11 @@
 ```mermaid
 flowchart TD
     %% Attack Stages
-    A[Reconnaissance]
-    B[Weaponization]
-    C[Delivery]
-    D[Exploitation]
-    E[Command and Control (C2)]
-    F[Actions on Objectives]
+    A[Reconnaissance] --> B[Weaponization]
+    B --> C[Delivery]
+    C --> D[Exploitation]
+    D --> E[Command and Control (C2)]
+    E --> F[Actions on Objectives]
 
     %% STRIDE Threats
     G[Spoofing]
@@ -18,7 +17,7 @@ flowchart TD
     K[Denial of Service]
     L[Elevation of Privilege]
 
-    %% Threats Linked to Stages
+    %% Linking STRIDE Threats to Stages
     A --> G
     B --> H
     C --> I
@@ -40,6 +39,7 @@ flowchart TD
     J --> P
     G --> R
     H --> R
+
 
 
 
