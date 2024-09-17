@@ -92,34 +92,76 @@ In a DDoS attack, the attacker overwhelms the health app's server with a flood o
 
 ```mermaid
 flowchart TD
-    A[Reconnaissance: Information Gathering] --> B[Weaponization: Preparing the Attack]
-    B --> C[Delivery: Executing the Attack]
-    C --> D[Exploitation: Overloading the System]
-    D --> E[Installation: Maintaining the Attack]
+    A[Reconnaissance] --> B[Weaponization]
+    B --> C[Delivery]
+    C --> D[Exploitation]
+    D --> E[Installation]
     E --> F[Command and Control (C2)]
-    F --> G[Actions on Objectives: Disruption and Damage]
-    G --> H[Defensive Measures and Mitigation Strategies]
+    F --> G[Actions on Objectives]
+    G --> H[Defensive Measures]
 
-    subgraph A [Reconnaissance]
+    subgraph Reconnaissance
         A1[Discover IP addresses and network infrastructure] 
         A2[Analyze traffic patterns and server specs]
         A --> A1
         A --> A2
     end
 
-    subgraph B [Weaponization]
+    subgraph Weaponization
         B1[Set up or acquire a botnet] 
-        B2[Configure attack methods (e.g., UDP floods, TCP SYN floods)]
+        B2[Configure attack methods]
         B --> B1
         B --> B2
     end
 
-    subgraph C [Delivery]
+    subgraph Delivery
         C1[Initiate attack with massive traffic] 
-        C2[Target specific IP addresses or domains]
+        C2[Target IP addresses or domains]
         C --> C1
         C --> C2
     end
 
-    subgraph D [Exploitation]
+    subgraph Exploitation
+        D1[Service outages] 
+        D2[Server unresponsive]
+        D --> D1
+        D --> D2
+    end
+
+    subgraph Installation
+        E1[Adjust attack vectors] 
+        E2[Use multiple attack methods]
+        E --> E1
+        E --> E2
+    end
+
+    subgraph Command_and_Control
+        F1[Monitor and adjust attack] 
+        F2[Use C2 server]
+        F --> F1
+        F --> F2
+    end
+
+    subgraph Actions_on_Objectives
+        G1[Service disruption] 
+        G2[Reputation damage]
+        G3[Financial impact]
+        G --> G1
+        G --> G2
+        G --> G3
+    end
+
+    subgraph Defensive_Measures
+        H1[Use DDoS protection services] 
+        H2[Implement rate limiting] 
+        H3[Monitor traffic] 
+        H4[Employ scalable infrastructure] 
+        H5[Set up redundancy]
+        H --> H1
+        H --> H2
+        H --> H3
+        H --> H4
+        H --> H5
+    end
+
    
