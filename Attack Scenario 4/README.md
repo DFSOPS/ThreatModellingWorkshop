@@ -166,4 +166,40 @@ In a DDoS attack, the attacker overwhelms the health app's server with a flood o
 
 -   **Scalable Infrastructure:** Employ auto-scaling and load balancing to handle high traffic volumes and distribute the load across multiple servers.
 
--   **Redundancy:** Set up failover mechanisms and redundant server instances to ensure service availability even during an attack.
+-   **Redundancy:** Set up failover mechanisms and redundant server instances to ensure service availability even during an attack.  
+
+# DDoS Attack Scenario Flowchart
+
+```mermaid
+flowchart TD
+    A[Reconnaissance: Information Gathering] --> B[Weaponization: Preparing the Attack]
+    B --> C[Delivery: Executing the Attack]
+    C --> D[Exploitation: Overloading the System]
+    D --> E[Installation: Maintaining the Attack]
+    E --> F[Command and Control (C2)]
+    F --> G[Actions on Objectives: Disruption and Damage]
+    G --> H[Defensive Measures and Mitigation Strategies]
+
+    subgraph A [Reconnaissance]
+        A1[Discover IP addresses and network infrastructure] 
+        A2[Analyze traffic patterns and server specs]
+        A --> A1
+        A --> A2
+    end
+
+    subgraph B [Weaponization]
+        B1[Set up or acquire a botnet] 
+        B2[Configure attack methods (e.g., UDP floods, TCP SYN floods)]
+        B --> B1
+        B --> B2
+    end
+
+    subgraph C [Delivery]
+        C1[Initiate attack with massive traffic] 
+        C2[Target specific IP addresses or domains]
+        C --> C1
+        C --> C2
+    end
+
+    subgraph D [Exploitation]
+   
