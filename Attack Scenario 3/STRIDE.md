@@ -1,31 +1,49 @@
-# STRIDE threat modeling framework for the Man-in-the-Middle (MitM) attack scenario
+# STRIDE Threat Modeling for DDoS Attack
 
 ```mermaid
 flowchart TD
     A[Reconnaissance] --> B[Weaponization]
     B --> C[Delivery]
     C --> D[Exploitation]
-    D --> E[Installation]
-    E --> F[Command and Control]
-    F --> G[Actions on Objectives]
+    D --> E[Command and Control (C2)]
+    E --> F[Actions on Objectives]
 
-    A --> |Identify vulnerabilities| H[STRIDE: Spoofing]
-    B --> |Setup rogue access point| I[STRIDE: Spoofing, Tampering]
-    C --> |Intercept traffic| J[STRIDE: Eavesdropping, Tampering]
-    D --> |Capture or modify data| K[STRIDE: Tampering, Information Disclosure]
-    E --> |Maintain persistence| L[STRIDE: Tampering, Repudiation]
-    F --> |Establish covert channel| M[STRIDE: Eavesdropping, Tampering]
-    G --> |Exfiltrate data, commit fraud| N[STRIDE: Information Disclosure, Tampering, Repudiation]
+    %% STRIDE Threats
+    G[Spoofing]
+    H[Tampering]
+    I[Repudiation]
+    J[Information Disclosure]
+    K[Denial of Service]
+    L[Elevation of Privilege]
 
-    H --> |Mitigate with Encryption & Authentication| O[Controls: HTTPS, Certificate Pinning]
-    I --> |Mitigate with Secure Access Controls| P[Controls: Network Security, Wi-Fi Security Awareness]
-    J --> |Mitigate with Encrypted Communication| Q[Controls: HTTPS, HSTS]
-    K --> |Mitigate with Data Protection| R[Controls: Encryption, Secure Data Transmission]
-    L --> |Mitigate with Secure Session Management| S[Controls: Session Expiration, MFA]
-    M --> |Mitigate with Traffic Monitoring| T[Controls: Network Monitoring, Anomaly Detection]
-    N --> |Mitigate with Fraud Detection & Incident Response| U[Controls: Monitoring, Incident Management]
+    %% Threats Linked to Stages
+    A --> G
+    B --> H
+    C --> I
+    D --> J
+    E --> K
+    F --> L
 
-    classDef stride fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef control fill:#ccf,stroke:#333,stroke-width:2px;
-    class H,I,J,K,L,M,N stride;
-    class O,P,Q,R,S,T,U control;
+    %% Threat Descriptions
+    G -.-> A1[Identity Impersonation]
+    H -.-> B1[Modifying Attack Vectors]
+    I -.-> C1[Denying Involvement]
+    J -.-> D1[Leaking Sensitive Information]
+    K -.-> E1[Overloading System Resources]
+    L -.-> F1[Unauthorized Access]
+
+    %% Mitigations
+    M[Mitigation Strategies]
+    N[DDoS Protection Services]
+    O[Rate Limiting]
+    P[Traffic Monitoring]
+    Q[Scalable Infrastructure]
+    R[Redundancy]
+
+    %% Linking Threats to Mitigations
+    K --> N
+    K --> O
+    J --> P
+    G --> R
+    H --> R
+
