@@ -1,43 +1,47 @@
-# DDoS Attack Sequence Diagram Using STRIDE Framework
+# STRIDE Framework Diagram
 
 ```mermaid
-sequenceDiagram
-    participant Attacker
-    participant User
-    participant SolarisHealthApp
-    participant BackendServer
-    participant CnCServer
+flowchart TD
+    subgraph STRIDE
+        direction TB
+        A[**Spoofing**]
+        B[**Tampering**]
+        C[**Repudiation**]
+        D[**Information Disclosure**]
+        E[**Denial of Service**]
+        F[**Elevation of Privilege**]
+    end
 
-    %% STRIDE: Spoofing
-    Attacker->>CnCServer: Configure botnet (Spoofing)
-    CnCServer->>Attacker: Botnet ready
+    subgraph Techniques_and_Mitigations
+        direction TB
+        A1[Spoofing Techniques: Phishing, IP Spoofing]
+        A2[Spoofing Mitigations: MFA, Strong Authentication]
 
-    %% STRIDE: Tampering
-    Attacker->>BackendServer: Flood with traffic (Tampering)
-    BackendServer->>SolarisHealthApp: Overwhelmed with requests
+        B1[Tampering Techniques: SQL Injection, XSS]
+        B2[Tampering Mitigations: Input Validation, Escaping Data]
 
-    %% STRIDE: Repudiation
-    Attacker->>CnCServer: Monitor and adjust attack (Repudiation)
-    CnCServer->>Attacker: Provide updates
+        C1[Repudiation Techniques: Log Tampering, Log Deletion]
+        C2[Repudiation Mitigations: Secure Logging, Immutable Logs]
 
-    %% STRIDE: Information Disclosure
-    User->>SolarisHealthApp: Sends legitimate request (Information Disclosure)
-    SolarisHealthApp->>User: Service disrupted
+        D1[Information Disclosure Techniques: Data Leakage, Insecure Storage]
+        D2[Information Disclosure Mitigations: Encryption, Access Controls]
 
-    %% STRIDE: Denial of Service
-    Attacker->>BackendServer: Overload with malicious traffic (Denial of Service)
-    BackendServer->>SolarisHealthApp: Service disruption
+        E1[Denial of Service Techniques: DDoS, Resource Exhaustion]
+        E2[Denial of Service Mitigations: Rate Limiting, DDoS Protection]
 
-    %% STRIDE: Elevation of Privilege
-    Attacker->>CnCServer: Refine attack methods (Elevation of Privilege)
-    CnCServer->>Attacker: Confirm adjustments
+        F1[Elevation of Privilege Techniques: Privilege Escalation, Exploits]
+        F2[Elevation of Privilege Mitigations: Least Privilege, Regular Patching]
+    end
 
-    %% Mitigations
-    SolarisHealthApp->>BackendServer: Attempt to mitigate attack
-    BackendServer->>SolarisHealthApp: Responds to mitigation efforts
-    SolarisHealthApp->>User: Communicate service disruption
-
-    %% Defensive Measures
-    SolarisHealthApp->>BackendServer: Rate Limiting and Traffic Monitoring
-    BackendServer->>SolarisHealthApp: Scalable Infrastructure and DDoS Protection
-    SolarisHealthApp->>User: Provide updates on service restoration
+    A --> A1
+    A --> A2
+    B --> B1
+    B --> B2
+    C --> C1
+    C --> C2
+    D --> D1
+    D --> D2
+    E --> E1
+    E --> E2
+    F --> F1
+    F --> F2
