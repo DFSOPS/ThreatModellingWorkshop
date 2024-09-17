@@ -2,11 +2,18 @@
 
 ```mermaid
 graph TD
-    A[Reconnaissance] --> B[Weaponization]
-    B --> C[Delivery]
-    C --> D[Exploitation]
-    D --> E[Command and Control (C2)]
-    E --> F[Actions on Objectives]
+    A[Reconnaissance]
+    B[Weaponization]
+    C[Delivery]
+    D[Exploitation]
+    E[Command and Control (C2)]
+    F[Actions on Objectives]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
 
     F --> G[DDoS Protection Services]
     F --> H[Rate Limiting]
@@ -14,19 +21,8 @@ graph TD
     F --> J[Scalable Infrastructure]
     F --> K[Redundancy]
 
-    G --> E
-    H --> E
-    I --> E
-    J --> E
-    K --> E
-
-
-
-
-
-
-
-
-
-
-
+    G --> F
+    H --> F
+    I --> F
+    J --> F
+    K --> F
