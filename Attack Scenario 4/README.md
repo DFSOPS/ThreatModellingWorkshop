@@ -90,13 +90,15 @@ In a DDoS attack, the attacker overwhelms the health app's server with a flood o
 
 # DDoS Attack Scenario Flowchart
 
+# DDoS Attack Scenario Flowchart
+
 ```mermaid
 flowchart TD
     A[Reconnaissance] --> B[Weaponization]
     B --> C[Delivery]
     C --> D[Exploitation]
     D --> E[Installation]
-    E --> F[Command and Control (C2)]
+    E --> F[Command and Control]
     F --> G[Actions on Objectives]
     G --> H[Defensive Measures]
 
@@ -115,7 +117,7 @@ flowchart TD
     end
 
     subgraph Delivery
-        C1[Initiate attack with massive traffic] 
+        C1[Initiate attack with traffic] 
         C2[Target IP addresses or domains]
         C --> C1
         C --> C2
@@ -130,20 +132,20 @@ flowchart TD
 
     subgraph Installation
         E1[Adjust attack vectors] 
-        E2[Use multiple attack methods]
+        E2[Use multiple methods]
         E --> E1
         E --> E2
     end
 
     subgraph Command_and_Control
         F1[Monitor and adjust attack] 
-        F2[Use C2 server]
+        F2[Control with C2 server]
         F --> F1
         F --> F2
     end
 
     subgraph Actions_on_Objectives
-        G1[Service disruption] 
+        G1[Disruption and downtime] 
         G2[Reputation damage]
         G3[Financial impact]
         G --> G1
@@ -152,11 +154,11 @@ flowchart TD
     end
 
     subgraph Defensive_Measures
-        H1[Use DDoS protection services] 
-        H2[Implement rate limiting] 
-        H3[Monitor traffic] 
-        H4[Employ scalable infrastructure] 
-        H5[Set up redundancy]
+        H1[DDoS protection services] 
+        H2[Rate limiting] 
+        H3[Traffic monitoring] 
+        H4[Scalable infrastructure] 
+        H5[Redundancy]
         H --> H1
         H --> H2
         H --> H3
