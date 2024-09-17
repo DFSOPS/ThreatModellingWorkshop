@@ -90,8 +90,6 @@ In a DDoS attack, the attacker overwhelms the health app's server with a flood o
 
 # DDoS Attack Scenario Flowchart
 
-# DDoS Attack Scenario Flowchart
-
 ```mermaid
 flowchart TD
     A[Reconnaissance] --> B[Weaponization]
