@@ -8,32 +8,44 @@ To access the code for this repo please visit the following website for the full
 
 Customise all of the below to a chosen application - this can be make believe or a running application you have created for your project as created during the bootcamp or a live, real application for your organisation. If the application is live and real I recommned you keep the repo private.
 
-# Threat Modelling Workshop Summary
+Threat Modeling Workshop Overview
+=================================
 
-## Introduction
-A 3 Hour threat modelling workshop took place to detail the runbook scenario of multiple AI attacks against the web-facing health care application Solaris Care Connect 360.
+Introduction
+------------
 
-## Attendess
-Care Connect Eng team, Product Managers, DevEx Engineers and the DevSecOps Team.
+A 3-hour threat modeling workshop was conducted to analyze the runbook scenarios involving various AI-driven attacks targeting the web-based healthcare application, Solaris Care Connect 360.
 
-## Scope
-4 Scenarios were run covering: (1) AI Generated External phishing email utilising admin credentials, (2) Attack against Machine Processes and the data lake, (3) SQL Injection attack and (4) Insider attack taking Quant algorithms.
+Attendees
+---------
 
-## Methodology
-All scenarios were run against the cyber attack killchain, utilising the Mitre Att&ack framework and STRIDE for control gap assessments. Culminating in identified risks. 
+The workshop included members from the Care Connect Engineering team, Product Managers, DevEx Engineers, and the DevSecOps team.
 
-## Conclusion
-A total of 4 high risks and 1 medium risks were found during the threat modelling workshop.
+Scope
+-----
 
-## Controls Required
+The workshop covered four scenarios: (1) AI-generated phishing emails exploiting admin credentials, (2) Attacks on machine processes and the data lake, (3) SQL injection attacks, and (4) Insider threats involving theft of quantitative algorithms.
 
-- Regular security audits using ASVS specifically targeting the Solaris Health 360 application to detect vulnerabilities and weaknesses in its security measures.
-- Patch management to ensure the Solari Health 360 application and its underlying technologies are up-to-date and protected against known vulnerabilities.
-- Comprehensive employee training on phishing awareness to educate users of the Solaris Health 360 application about the risks of phishing attacks and how to identify and report suspicious emails.
-- Implementation of a Web Application Firewall (WAF) tailored to the Solari Health 360 application's traffic to monitor and filter incoming requests for malicious activity.
-- Deployment of Multi-factor Authentication (MFA) to enhance authentication security and prevent unauthorized access to the Solari Health 360 application.
-- Continuous network traffic monitoring to detect and respond to suspicious activity within the Solari Health 360 application's infrastructure.
-- Implementation of Role-based Access Control (RBAC) within the Solari Health 360 application to limit access to sensitive health data and functionalities based on user roles and permissions.
+Methodology
+-----------
+
+Each scenario was evaluated using the cyber attack kill chain, along with the MITRE ATT&CK framework and STRIDE methodology for assessing control gaps, resulting in the identification of key risks.
+
+Conclusion
+----------
+
+The threat modeling session identified a total of 4 high-risk and 1 medium-risk vulnerabilities.
+
+Required Controls
+-----------------
+
+-   Conduct regular security audits using the Application Security Verification Standard (ASVS) to identify vulnerabilities and weaknesses specific to the Solaris Health 360 application.
+-   Implement a patch management process to keep the Solaris Health 360 application and its associated technologies updated and protected from known vulnerabilities.
+-   Provide comprehensive training for employees on phishing awareness to help users of Solaris Health 360 recognize and report suspicious emails.
+-   Deploy a Web Application Firewall (WAF) customized for the Solaris Health 360 application's traffic to monitor and block malicious requests.
+-   Implement Multi-factor Authentication (MFA) to strengthen authentication measures and prevent unauthorized access to the Solaris Health 360 application.
+-   Continuously monitor network traffic to detect and address any suspicious activity within the Solaris Health 360 application's infrastructure.
+-   Apply Role-based Access Control (RBAC) within the Solaris Health 360 application to restrict access to sensitive health data and functionalities based on user roles and permissions.
 
 # Threat Modelling Process Summary
 
