@@ -4,7 +4,7 @@ Threat Modeling Workshop Overview
 Introduction
 ------------
 
-A 3-hour threat modeling workshop was conducted to analyze the runbook scenarios involving various AI-driven attacks targeting the web-based healthcare application, Solaris Care Connect 360.
+A 3-hour threat modeling workshop was conducted to analyze the runbook scenarios involving various AI and traditional attacks targeting the web-based healthcare application, Solaris Care Connect 360.
 
 Attendees
 ---------
@@ -14,7 +14,7 @@ The workshop included members from the Care Connect Engineering team, Product Ma
 Scope
 -----
 
-The workshop covered four scenarios: (1) AI-generated phishing emails exploiting admin credentials, (2) Attacks on machine processes and the data lake, (3) SQL injection attacks, and (4) Insider threats involving theft of quantitative algorithms.
+The workshop covered four scenarios: (1) AI-generated phishing emails exploiting admin credentials, (2) M-I-T-M Attack by Disgruntled Employee, (3) SQL injection attacks - Script Kiddie, and (4) Competitor Cartel DDOSS Attacks.
 
 Methodology
 -----------
