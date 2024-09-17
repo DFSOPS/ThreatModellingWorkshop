@@ -9,14 +9,14 @@ flowchart TD
     E --> F[Actions on Objectives]
 
     %% STRIDE Threats
-    G[Spoofing]
+    G[Spoofing] 
     H[Tampering]
     I[Repudiation]
     J[Information Disclosure]
     K[Denial of Service]
     L[Elevation of Privilege]
 
-    %% Threats Linked to Stages
+    %% Linking Threats to Attack Stages
     A --> G
     B --> H
     C --> I
@@ -24,15 +24,7 @@ flowchart TD
     E --> K
     F --> L
 
-    %% Threat Descriptions
-    G -.-> A1[Identity Impersonation]
-    H -.-> B1[Modifying Attack Vectors]
-    I -.-> C1[Denying Involvement]
-    J -.-> D1[Leaking Sensitive Information]
-    K -.-> E1[Overloading System Resources]
-    L -.-> F1[Unauthorized Access]
-
-    %% Mitigations
+    %% Mitigation Strategies
     M[Mitigation Strategies]
     N[DDoS Protection Services]
     O[Rate Limiting]
