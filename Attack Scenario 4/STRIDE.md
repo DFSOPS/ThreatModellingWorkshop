@@ -2,18 +2,24 @@
 
 ```mermaid
 graph TD
-    A[Reconnaissance] -->|Spoofing| G[Spoofing]
-    B[Weaponization] -->|Tampering| H[Tampering]
-    C[Delivery] -->|Repudiation| I[Repudiation]
-    D[Exploitation] -->|Information Disclosure| J[Information Disclosure]
-    E[Command and Control (C2)] -->|Denial of Service| K[Denial of Service]
-    F[Actions on Objectives] -->|Elevation of Privilege| L[Elevation of Privilege]
+    A[Reconnaissance] --> B[Weaponization]
+    B --> C[Delivery]
+    C --> D[Exploitation]
+    D --> E[Command and Control (C2)]
+    E --> F[Actions on Objectives]
 
-    K -->|Mitigation| M[DDoS Protection Services]
-    K -->|Mitigation| N[Rate Limiting]
-    J -->|Mitigation| O[Traffic Monitoring]
-    K -->|Mitigation| P[Scalable Infrastructure]
-    K -->|Mitigation| Q[Redundancy]
+    F --> G[DDoS Protection Services]
+    F --> H[Rate Limiting]
+    F --> I[Traffic Monitoring]
+    F --> J[Scalable Infrastructure]
+    F --> K[Redundancy]
+
+    G -->|Mitigates| E
+    H -->|Mitigates| E
+    I -->|Mitigates| E
+    J -->|Mitigates| E
+    K -->|Mitigates| E
+
 
 
 
